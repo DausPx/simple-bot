@@ -4,5 +4,5 @@ module.exports = {
 	Help: require('./help'),
 	Commands: require('./commands'),
 	Addition: require('./addition'),
-	Test: require('./test')
+	Play: require('./play')
 };
