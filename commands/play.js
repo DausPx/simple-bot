@@ -1,4 +1,4 @@
-var randomNumber;
+var players = {}
 module.exports = {
 	name: 'play',
 	aliases: [],
@@ -9,17 +9,20 @@ module.exports = {
 	usage:"<number>",
 	// eslint-disable-next-line no-unused-vars
 	execute(msg, args) {
-		if(args[0] === 'start'){
-			randomNumber = Math.floor(Math.random() * 10)
-			return msg.reply("New game started\n The number has been created!")
-		}
+		var inputValue = args[0]
+		var userId = msg.author.id
 
-		if(randomNumber){
-			if(randomNumber !== parseInt(args[0])){
+		if(inputValue === 'start'){
+			players[userId] =  Math.floor(Math.random() * 10) + 1
+			return msg.reply("New game started\n The number has been created!")
+		} 
+
+		if(players[userId]){
+			if(players[userId] !== parseInt(inputValue)){
 				return msg.reply('You didn\'t guess right!')
 			}
 			
-			randomNumber = undefined
+			delete players[userId]
 			return msg.reply('Thats the number!')
 		}
 
