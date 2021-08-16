@@ -1,23 +1,19 @@
-var musicRecord = {
-    name : 'Hard cancer',
-    year: '1997',
-    author: 'Ivan Slavkovic',
-    numberSold: 200,
-    address: {
-        street: 'Jalija',
-        number: '23',
-        country: 'Serbia'
-    }
-}
-
-function itHas(object, key, value) {
-    var a = Object.keys(object).includes(key)
-    var b = Object.values(object).includes(value)
-    console.log(a,b)
-// console.log(Object.keys(object))
-// console.log(Object.values(object))
-}
-
-itHas(musicRecord, 'nest', 'Ivan Slavkovic')
+'use strict'
+// var, let, const (variables, scope, hoisting)
+// const array mutation (arrays, array mutations)
+// Object.freze()
+// arrow function (simple function, function in a function)
 
 
+
+
+
+
+
+
+
+
+// Some of Discord’s default commands aren’t so much practical as they are fun. 
+// The /tableflip command will paste the (╯°□°）╯︵ ┻━┻ emoji in the channel. 
+// The /unflip command will share ┬─┬ ノ( ゜-゜ノ), 
+// and /shrug will put ¯\_(ツ)_/¯ in the channel.
