@@ -34,30 +34,30 @@ module.exports = {
             break;
 
             case "trougao":
-                let stranicA = parseInt(args[1])
+                let stranicaA = parseInt(args[1])
                 let stranicaB = parseInt(args[2])
                 let stranicaC = parseInt(args[3])
 
-                let isTrougao = (stranicA + stranicaB > stranicaC && stranicaB + stranicaC > stranicA && stranicA + stranicaC > stranicaB)
+                let isTrougao = (stranicaA + stranicaB > stranicaC && stranicaB + stranicaC > stranicaA && stranicaA + stranicaC > stranicaB)
 
                 if(!isTrougao){
                     return msg.reply("Nemoguce je formirati trougao od datih duzina")
                 }
 
-                obim = a + b + c
+                obim = stranicaA + stranicaB + stranicaC
                 var polaObima = obim / 2
-                povrsina = Math.sqrt(polaObima * (polaObima - stranicA) * (polaObima - stranicaB) * (polaObima - stranicaC))
+                povrsina = Math.sqrt(polaObima * (polaObima - stranicaA) * (polaObima - stranicaB) * (polaObima - stranicaC))
 
                 msg.reply(`Povrsina je: ${povrsina}`)
                 msg.reply(`Obim je: ${obim}`)
             break;
             
             case 'pravougaonik':
-                let stranicaA = parseInt(args[1])
-                let stranicaB = parseInt(args[2])
+                let stranica1 = parseInt(args[1])
+                let stranica2 = parseInt(args[2])
 
-                povrsina = stranicaA * stranicaB
-                obim = 2 * (stranicaA + stranicaB)
+                povrsina = stranica1 * stranica2
+                obim = 2 * (stranica1 + stranica2)
 
                 msg.reply(`Povrsina je: ${povrsina}`)
                 msg.reply(`Obim je: ${obim}`)
