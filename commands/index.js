@@ -5,5 +5,8 @@ module.exports = {
 	Commands: require('./commands'),
 	Addition: require('./addition'),
 	Play: require('./play'),
-	Arijan: require('./arijan')
+	Arijan: require('./arijan'),
+	Singlegame: require('./singlegame'),
+	MultiGame: require('./multigame'),
+	Roll: require(('./roll'))
 };
