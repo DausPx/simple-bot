@@ -5,11 +5,13 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-      "start": "node .",
-      "lint": "eslint .",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node .",
+        "lint": "eslint .",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Suad Suljovic",
-    "license": "ISC"
-  }
-  
+    "license": "ISC",
+    "dependencies": {
+        "node-fetch": "^3.0.0"
+    }
+}

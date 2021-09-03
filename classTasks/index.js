@@ -1,22 +1,33 @@
-'use strict'
+"use strict";
 
-import { countLetters } from './test.js'
-
-let randomLetters = 'sdfaaaaaaaaaaaaaaaa'
-console.log(countLetters(randomLetters))
+import { countLetters, getQoute, myPromise } from "./test.js";
 
 
+//Promises
 
+// myPromise
+// .then((value)=>{
+//     console.log('value',value)
+// })
+// .catch((error)=>{console.log('error',error)})
 
+// try {
+//     const result = await myPromise;
+//     console.log('try',result)
 
+// } catch (error) {
+//     console.log('error', error)
+// }
 
+// fetch("https://api.quotable.io/random")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(`${data.content} —${data.author}`);
+//   }).catch((error) => console.log(error));
 
-
-
-// Input: “adsjfdsfsfjsdjfhacabcsbajda”
-// Output: { a: 5, b: 2, c: 2, d: 4, f: 4, j: 4, s: 5 }
-
-
-// var test_string = "emocleW ot SJ ni nialP hsilgnE"
-// reverse(test_string)
-// << Welcome to JS in Plain English
+  try {
+      const data = await getQoute()
+      console.log(`${data.content} —${data.author}`);
+  } catch (error) {
+      console.log(error)
+  }
