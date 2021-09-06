@@ -1,6 +1,6 @@
 "use strict";
-
-import { countLetters, getQoute, myPromise } from "./test.js";
+import fetch from "node-fetch";
+import { countLetters, get20Quotes, getQoute, getRandomQuote, myPromise } from "./test.js";
 
 
 //Promises
@@ -25,9 +25,12 @@ import { countLetters, getQoute, myPromise } from "./test.js";
 //     console.log(`${data.content} —${data.author}`);
 //   }).catch((error) => console.log(error));
 
-  try {
-      const data = await getQoute()
-      console.log(`${data.content} —${data.author}`);
-  } catch (error) {
-      console.log(error)
-  }
+//   try {
+//       const data = await getQoute()
+//       console.log(`${data.content} —${data.author}`);
+//   } catch (error) {
+//       console.log(error)
+//   }
+
+// get20Quotes().then(result => console.log(result)).catch((error)=>{console.log(error)})
+getRandomQuote('famous-quotes').then(result => console.log(result)).catch((error)=>{console.log(error)})
