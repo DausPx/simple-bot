@@ -8,5 +8,6 @@ module.exports = {
 	Arijan: require('./arijan'),
 	Singlegame: require('./singlegame'),
 	MultiGame: require('./multigame'),
-	Roll: require(('./roll'))
+	Roll: require('./roll'),
+	Quote: require('./quote')
 };
