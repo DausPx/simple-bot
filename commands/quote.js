@@ -34,6 +34,5 @@ module.exports = {
         msg.reply(msg2)
         msg.reply(msg3)
         msg.reply(msg4)
-
 	},
 };
