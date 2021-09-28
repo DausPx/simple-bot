@@ -45,19 +45,62 @@
 
 // console.log(getElement(array,))
 
-const array = [1,2,3,4,5,6]
+// const array = [1,2,3,4,5,6]
 
-Array.prototype.MyMap = function (callback) {
+// Array.prototype.MyMap = function (callback) {
+//     let newArray = []
+//     console.log(this)
+
+//     this.forEach(element => {
+//         newArray.push(callback(element))
+//     })
+
+//     return newArray
+// }
+
+// const a = array.MyMap((element => element*2))
+
+// console.log(a)
+
+// const array = [1,2,3,4,5,6]
+
+// Array.prototype.myFilter = function (callback) {
+//     let newArray = []
+//     console.log(this)
+
+//     return newArray
+// }
+// // value, index, array
+// const filteredArray = array.myFilter(value => value % 2 === 0 ? true : false )
+
+// console.log(filteredArray)
+
+const array = [
+  { id: 1, name: "suad" },
+  { id: 2, name: "Ivan" },
+  { id: 3, name: "Dzejlan" },
+  { id: 4, name: "Belma" },
+];
+
+Array.prototype.myReduce = function (callback) {
     let newArray = []
     console.log(this)
 
-    this.forEach(element => {
-        newArray.push(callback(element))
-    })
-
     return newArray
 }
+// perviousvalue, currentValue, index, array
 
-const a = array.MyMap((element => element*2))
 
-console.log(a)
+const reducedArray = array.myReduce((result, value) => {
+  if(value.id %2 === 0){
+      result.push(value.name)
+  }
+  return result
+}, []);
+
+// const array2 = array
+//   .filter((value) => value.id % 2 === 0)
+//   .map((value) => value.name);
+// console.log(array2);
+
+console.log(reducedArray);
