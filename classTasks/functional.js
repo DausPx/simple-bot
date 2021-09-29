@@ -82,21 +82,26 @@ const array = [
   { id: 4, name: "Belma" },
 ];
 
-Array.prototype.myReduce = function (callback) {
-    let newArray = []
-    console.log(this)
+Array.prototype.myReduce = function (callback, initial) {
+    let result = initial
+    
+    this.forEach((value, index)=> {
+      if(result === undefined && index === 0){
+        result = value
+      }else {
+        result = callback(result, value, index, this)
+      }
+    })
 
-    return newArray
+    return result
 }
 // perviousvalue, currentValue, index, array
 
 
-const reducedArray = array.myReduce((result, value) => {
-  if(value.id %2 === 0){
-      result.push(value.name)
-  }
-  return result
-}, []);
+const reducedArray = array.myReduce((result, value, index) => {
+  
+  return result * value.id
+},1);
 
 // const array2 = array
 //   .filter((value) => value.id % 2 === 0)
